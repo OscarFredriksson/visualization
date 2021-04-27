@@ -36,7 +36,7 @@
     \rhead{\gettitle}
     \rfoot \thepage
 
-    \section{First visualization}
+    \section{Visualization using ISO-volume}
     From the lecture and reading up on the internet it was evident that ISO-surfaces was a common way of visualizing volume. While exploring the Paraview filters the filter \textit{IsoVolume} was found which, after some tweaking gave a good representation of the teapot. The achieved visualization can be seen in figure \ref{fig:iso-volume}.
 
     % \begin{figure}[H]
@@ -51,7 +51,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{img/teapot-iso-volume.png}
+        \includegraphics[width=0.75\textwidth]{../img/teapot-iso-volume.png}
         
         \caption{A visualization of the dataset using an iso-volume.}
         \label{fig:iso-volume}
@@ -61,10 +61,21 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{img/teapot-iso-volume-clip.png}
+        \includegraphics[width=0.75\textwidth]{../img/teapot-iso-volume-clip.png}
         
         \caption{The same visualization as figure \ref{fig:iso-volume}, but with an added clip to see the lobster inside.}
         \label{fig:iso-volume-clip}
+    \end{figure}
+
+    \section{Visualization using contour}
+
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{../img/teapot-contour.png}
+        
+        \caption{The teapot visualized using contour and transparency of the volume to see the lobster inside.}
+        \label{fig:contour}
     \end{figure}
 
     \newpage
