@@ -10,24 +10,9 @@ reader.SetDataExtent(0, 255, 0, 255, 0, 177)
 reader.SetDataScalarTypeToUnsignedChar()
 reader.Update()
 
-# Fill in the rest such that the important parts of the dataset is visualized
-
-# Create suitable filter(s)
-
-# Map the enriched data from the filter(s) to the appropriate visualization model(s)
-
-# Create corresponding actors(s) for each mapping
-
-# Create renderer and attach actor(s)
-
-# Create render window and connect to renderer
-
-# Create interactor, connect to render window, and
-
 contour1 = vtk.vtkContourFilter()
 contour1.SetInputConnection(reader.GetOutputPort())
 contour1.GenerateValues(2, 0.0, 30)
-
 
 mapper1 = vtk.vtkPolyDataMapper()
 mapper1.SetInputConnection(contour1.GetOutputPort())
