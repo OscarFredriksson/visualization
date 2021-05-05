@@ -16,6 +16,33 @@
 \usepackage{fancyhdr}   %page header
 \pagestyle{fancy}
 
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=false,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=1
+}
+\lstset{style=mystyle}
+
 \addbibresource{sources.bib}
 
 \newcommand{\getauthor}{Oscar Fredriksson} %Author
@@ -44,13 +71,23 @@
 
     % Document starts here
     \section{Visualization using Contour}
-    The values from lab 1 was tweaked slightly to achieve a similuar 
+    The values from lab 1 was tweaked slightly to achieve a similar 
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{../img/contour.png}
         \caption{The  teapot  visualized  using  contour  with  values  30  (blue)  and  130(yellow) along with an opacity value of 0.2 to see the lobster inside.}
         \label{fig:contour}
+    \end{figure}
+
+    \section{Visualization using Clip}
+    The values from lab 1 was tweaked slightly to achieve a similar 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{../img/clip.png}
+        \caption{}
+        \label{fig:clip}
     \end{figure}
 
 
@@ -60,13 +97,20 @@
     % \printbibliography
 
     % Appendices
-    % \newpage
-    % \begin{appendices}
+    \newpage
+    \begin{appendices}
 
-    %     \section{First appendix here}
-    %     \label{appendix:}
+        \section{Contour visualization code}
+        \label{appendix:contour}
 
-    % \end{appendices}
+        \lstinputlisting[language=python]{../src/contour.py}
+
+        \section{Contour visualization code}
+        \label{appendix:clip}
+
+        \lstinputlisting[language=python]{../src/clip.py}
+
+    \end{appendices}
 
 \end{document}
 
