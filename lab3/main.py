@@ -43,6 +43,8 @@ hover_tool = HoverTool(
 fill_color = "red"
 line_color = "red"
 fill_color = "gray"
+graph_size = 600
+circle_size = 8
 
 selection_glyph = Circle(fill_color=fill_color, fill_alpha=1, line_color=line_color)
 nonselection_glyph = Circle(fill_color=fill_color, fill_alpha=0.1, line_color=None)
@@ -50,13 +52,13 @@ nonselection_glyph = Circle(fill_color=fill_color, fill_alpha=0.1, line_color=No
 
 # # create a new plot with a title and axis labels
 left = figure(
-    tools="box_select,box_zoom",
+    tools="box_select,box_zoom,reset",
     title="",
     # y_range=source.data["y"],
     x_axis_label="IMDB Score (0-10)",
-    y_axis_label="Gross ($)",
-    plot_width=750,
-    plot_height=750,
+    y_axis_label="Gross",
+    plot_width=graph_size,
+    plot_height=graph_size,
 )
 
 left_circle = left.circle(
@@ -66,7 +68,7 @@ left_circle = left.circle(
     fill_alpha=0.5,
     fill_color=fill_color,
     line_color=line_color,
-    size=10,
+    size=circle_size,
 )
 
 left.left[0].formatter.use_scientific = False
@@ -76,13 +78,13 @@ left_circle.nonselection_glyph = nonselection_glyph
 left.add_tools(hover_tool)
 
 right = figure(
-    tools="box_select,box_zoom",
+    tools="box_select,box_zoom,reset",
     title="",
     # y_range=source.data["y"],
     x_axis_label="Year",
-    y_axis_label="Budget ($)",
-    plot_width=750,
-    plot_height=750,
+    y_axis_label="Budget",
+    plot_width=graph_size,
+    plot_height=graph_size,
 )
 
 right_circle = right.circle(
@@ -92,7 +94,7 @@ right_circle = right.circle(
     fill_alpha=0.5,
     fill_color=fill_color,
     line_color=line_color,
-    size=10,
+    size=circle_size,
 )
 
 right.left[0].formatter.use_scientific = False
