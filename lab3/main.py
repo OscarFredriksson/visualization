@@ -40,6 +40,8 @@ hover_tool = HoverTool(
     ]
 )
 
+tools = "box_select,box_zoom,reset"
+
 fill_color = "red"
 line_color = "red"
 fill_color = "gray"
@@ -52,7 +54,7 @@ nonselection_glyph = Circle(fill_color=fill_color, fill_alpha=0.1, line_color=No
 
 # # create a new plot with a title and axis labels
 left = figure(
-    tools="box_select,box_zoom,reset",
+    tools=tools,
     title="",
     # y_range=source.data["y"],
     x_axis_label="IMDB Score (0-10)",
@@ -78,7 +80,7 @@ left_circle.nonselection_glyph = nonselection_glyph
 left.add_tools(hover_tool)
 
 right = figure(
-    tools="box_select,box_zoom,reset",
+    tools=tools,
     title="",
     # y_range=source.data["y"],
     x_axis_label="Year",
